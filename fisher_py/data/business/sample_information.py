@@ -47,7 +47,7 @@ class SampleInformation(CommonCoreDataObject):
         Gets or sets the type of the sample.
         """
         assert type(value) is SampleType
-        self._get_wrapped_object_().SampleType = value.value
+        self._get_wrapped_object_().SampleType = value
 
     @property
     def processing_method_file(self) -> str:
@@ -199,7 +199,7 @@ class SampleInformation(CommonCoreDataObject):
         Gets or sets the bar code status.
         """
         assert type(value) is BarcodeStatusType
-        self._get_wrapped_object_().BarcodeStatus = value.value
+        self._get_wrapped_object_().BarcodeStatus = value
 
     @property
     def barcode(self) -> str:

@@ -29,7 +29,7 @@ class HeaderItem(NetWrapperBase):
             else:
                 raise ValueError('Unable to create header item.')
 
-            self._wrapped_object = self._wrapped_type(label, data_type.value, string_length_or_precision, is_scientific_notation)
+            self._wrapped_object = self._wrapped_type(label, data_type, string_length_or_precision, is_scientific_notation)
 
     @property
     def label(self) -> str:
@@ -61,7 +61,7 @@ class HeaderItem(NetWrapperBase):
         Gets or sets the data type for the field
         """
         assert type(value) is GenericDataTypes
-        self._get_wrapped_object_().DataType = value.value
+        self._get_wrapped_object_().DataType = value
 
     @property
     def string_length_or_precision(self) -> int:

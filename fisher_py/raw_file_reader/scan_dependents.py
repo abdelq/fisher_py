@@ -29,7 +29,7 @@ class ScanDependents(NetWrapperBase):
         The type of the raw file instrument.
         """
         assert type(value) is RawFileClassification
-        self._get_wrapped_object_().RawFileInstrumentType = value.value
+        self._get_wrapped_object_().RawFileInstrumentType = value
 
     @property
     def scan_dependent_detail_array(self) -> List[ScanDependentDetails]:

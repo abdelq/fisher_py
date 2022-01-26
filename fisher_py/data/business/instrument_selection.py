@@ -13,7 +13,7 @@ class InstrumentSelection(NetWrapperBase):
         super().__init__()
         assert type(instrument_index) is int
         assert type(device_type) is Device
-        self._wrapped_object = self._wrapped_object(instrument_index, device_type.value)
+        self._wrapped_object = self._wrapped_object(instrument_index, device_type)
 
     @property
     def instrument_index(self) -> int:

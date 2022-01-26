@@ -299,7 +299,7 @@ class Scan(NetWrapperBase):
         Gets or sets the Tolerance value.
         """
         assert type(value) is ToleranceMode
-        self._get_wrapped_object_().ToleranceUnit = value.value
+        self._get_wrapped_object_().ToleranceUnit = value
 
     @property
     def mass_resolution(self) -> float:

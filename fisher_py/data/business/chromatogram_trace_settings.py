@@ -22,7 +22,7 @@ class ChromatogramTraceSettings(NetWrapperBase):
             if type(arg) is ChromatogramTraceSettings:
                 self._wrapped_object = self._wrapped_type(arg._get_wrapped_object_())
             elif type(arg) is TraceType:
-                self._wrapped_object = self._wrapped_type(arg.value)
+                self._wrapped_object = self._wrapped_type(arg)
             else:
                 raise ValueError('Unable to create chromatogram trace settings')
         elif len(args) == 2:
@@ -153,7 +153,7 @@ class ChromatogramTraceSettings(NetWrapperBase):
         see ThermoFisher.CommonCore.Data.Business.TraceType for more details
         """
         assert type(value) is TraceType
-        self._get_wrapped_object_().Trace = value.value
+        self._get_wrapped_object_().Trace = value
 
     @property
     def mass_ranges(self) -> List[Range]:

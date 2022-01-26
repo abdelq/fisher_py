@@ -86,7 +86,7 @@ class PrecisionEstimate(NetWrapperBase):
         assert type(trailer_values) is list
         trailer_headings = to_net_list(trailer_headings, str)
         trailer_values = to_net_list(trailer_values, str)
-        return self._get_wrapped_object_().GetIonTime(analyzer_type.value, scan._get_wrapped_object_(), trailer_headings, trailer_values)
+        return self._get_wrapped_object_().GetIonTime(analyzer_type, scan._get_wrapped_object_(), trailer_headings, trailer_values)
 
     def get_mass_precision_estimate(self, scan: Scan, analyzer_type: MassAnalyzerType, ion_time: float, resolution: float) -> List[EstimatorResults]:
         """

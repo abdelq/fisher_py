@@ -1,5 +1,5 @@
 from typing import List
-from fisher_py.net_wrapping import NetWrapperBase, ThermoFisher
+from fisher_py.net_wrapping import NetWrapperBase
 from fisher_py.utils import is_number, to_net_list
 from fisher_py.data.filter_enums import (
     SectorScanType, FieldFreeRegionType, TriState, CompensationVoltageType, ScanDataType, 
@@ -42,7 +42,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.SectorScanType for possible values
         """
         assert type(value) is SectorScanType
-        self._get_wrapped_object_().SectorScan = value.value
+        self._get_wrapped_object_().SectorScan = value
 
     @property
     def field_free_region(self) -> FieldFreeRegionType:
@@ -65,7 +65,7 @@ class ScanFilter(NetWrapperBase):
         values
         """
         assert type(value) is FieldFreeRegionType
-        self._get_wrapped_object_().FieldFreeRegion = value.value
+        self._get_wrapped_object_().FieldFreeRegion = value
 
     @property
     def ultra(self) -> TriState:
@@ -80,7 +80,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the ultra scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Ultra = value.value
+        self._get_wrapped_object_().Ultra = value
 
     @property
     def enhanced(self) -> TriState:
@@ -95,7 +95,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the enhanced scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Enhanced = value.value
+        self._get_wrapped_object_().Enhanced = value
 
     @property
     def multiple_photon_dissociation(self) -> TriState:
@@ -110,7 +110,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the multi-photon dissociation filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().MultiplePhotonDissociation = value.value
+        self._get_wrapped_object_().MultiplePhotonDissociation = value
 
     @property
     def multiple_photon_dissociation_value(self) -> float:
@@ -146,7 +146,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the electron capture dissociation filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ElectronCaptureDissociation = value.value
+        self._get_wrapped_object_().ElectronCaptureDissociation = value
 
     @property
     def electron_capture_dissociation_value(self) -> float:
@@ -182,7 +182,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the photo ionization filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().PhotoIonization = value.value
+        self._get_wrapped_object_().PhotoIonization = value
 
     @property
     def pulsed_q_dissociation(self) -> TriState:
@@ -197,7 +197,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets pulsed dissociation filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().PulsedQDissociation = value.value
+        self._get_wrapped_object_().PulsedQDissociation = value
 
     @property
     def pulsed_q_dissociation_value(self) -> float:
@@ -235,7 +235,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the electron transfer dissociation filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ElectronTransferDissociation = value.value
+        self._get_wrapped_object_().ElectronTransferDissociation = value
 
     @property
     def lock(self) -> TriState:
@@ -250,7 +250,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the lock scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Lock = value.value
+        self._get_wrapped_object_().Lock = value
 
     @property
     def electron_transfer_dissociation_value(self) -> float:
@@ -305,7 +305,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the Multiplex type filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Multiplex = value.value
+        self._get_wrapped_object_().Multiplex = value
 
     @property
     def param_a(self) -> TriState:
@@ -320,7 +320,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the parameter a filtering rule..
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ParamA = value.value
+        self._get_wrapped_object_().ParamA = value
 
     @property
     def param_b(self) -> TriState:
@@ -335,7 +335,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the parameter b filtering rule..
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ParamB = value.value
+        self._get_wrapped_object_().ParamB = value
 
     @property
     def param_f(self) -> TriState:
@@ -350,7 +350,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the parameter f filtering rule..
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ParamF = value.value
+        self._get_wrapped_object_().ParamF = value
 
     @property
     def multi_notch(self) -> TriState:
@@ -367,7 +367,7 @@ class ScanFilter(NetWrapperBase):
         rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().MultiNotch = value.value
+        self._get_wrapped_object_().MultiNotch = value
 
     @property
     def param_r(self) -> TriState:
@@ -382,7 +382,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the parameter r filtering rule..
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ParamR = value.value
+        self._get_wrapped_object_().ParamR = value
 
     @property
     def param_v(self) -> TriState:
@@ -397,7 +397,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the parameter v filtering rule..
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().ParamV = value.value
+        self._get_wrapped_object_().ParamV = value
 
     @property
     def name(self) -> str:
@@ -427,7 +427,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets supplemental activation type filter rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().SupplementalActivation = value.value
+        self._get_wrapped_object_().SupplementalActivation = value
 
     @property
     def multi_state_activation(self) -> TriState:
@@ -442,7 +442,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets MultiStateActivation type filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().MultiStateActivation = value.value
+        self._get_wrapped_object_().MultiStateActivation = value
 
     @property
     def higher_energy_ci_d(self) -> TriState:
@@ -457,7 +457,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the higher energy CID filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().HigherEnergyCiD = value.value
+        self._get_wrapped_object_().HigherEnergyCiD = value
 
     @property
     def compensation_voltage(self) -> TriState:
@@ -472,7 +472,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets Compensation Voltage filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().CompensationVoltage = value.value
+        self._get_wrapped_object_().CompensationVoltage = value
 
     @property
     def compensation_volt_type(self) -> CompensationVoltageType:
@@ -495,7 +495,7 @@ class ScanFilter(NetWrapperBase):
         values
         """
         assert type(value) is CompensationVoltageType
-        self._get_wrapped_object_().CompensationVoltType = value.value
+        self._get_wrapped_object_().CompensationVoltType = value
 
     @property
     def detector_value(self) -> float:
@@ -624,7 +624,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the wideband filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Wideband = value.value
+        self._get_wrapped_object_().Wideband = value
 
     @property
     def scan_data(self) -> ScanDataType:
@@ -639,7 +639,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the scan data type (centroid or profile) filtering rule.
         """
         assert type(value) is ScanDataType
-        self._get_wrapped_object_().ScanData = value.value
+        self._get_wrapped_object_().ScanData = value
 
     @property
     def polarity(self) -> PolarityType:
@@ -660,7 +660,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.PolarityType for possible values
         """
         assert type(value) is PolarityType
-        self._get_wrapped_object_().Polarity = value.value
+        self._get_wrapped_object_().Polarity = value
 
     @property
     def souce_fragmentaion_value_count(self) -> int:
@@ -684,7 +684,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the dependent scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Dependent = value.value
+        self._get_wrapped_object_().Dependent = value
 
     @property
     def source_fragmentation(self) -> TriState:
@@ -699,7 +699,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets source fragmentation scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().SourceFragmentation = value.value
+        self._get_wrapped_object_().SourceFragmentation = value
 
     @property
     def source_fragmentation_type(self) -> SourceFragmentationValueType:
@@ -722,7 +722,7 @@ class ScanFilter(NetWrapperBase):
         possible values
         """
         assert type(value) is SourceFragmentationValueType
-        self._get_wrapped_object_().SourceFragmentationType = value.value
+        self._get_wrapped_object_().SourceFragmentationType = value
 
     @property
     def scan_mode(self) -> ScanModeType:
@@ -743,7 +743,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.ScanModeType for possible values
         """
         assert type(value) is ScanModeType
-        self._get_wrapped_object_().ScanMode = value.value
+        self._get_wrapped_object_().ScanMode = value
 
     @property
     def mass_analyzer(self) -> MassAnalyzerType:
@@ -764,7 +764,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.MassAnalyzerType for possible values
         """
         assert type(value) is MassAnalyzerType
-        self._get_wrapped_object_().MassAnalyzer = value.value
+        self._get_wrapped_object_().MassAnalyzer = value
 
     @property
     def detector(self) -> DetectorType:
@@ -785,7 +785,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.DetectorType for possible values
         """
         assert type(value) is DetectorType
-        self._get_wrapped_object_().Detector = value.value
+        self._get_wrapped_object_().Detector = value
 
     @property
     def turbo_scan(self) -> TriState:
@@ -800,7 +800,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the turbo scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().TurboScan = value.value
+        self._get_wrapped_object_().TurboScan = value
 
     @property
     def ionization_mode(self) -> IonizationModeType:
@@ -823,7 +823,7 @@ class ScanFilter(NetWrapperBase):
         values
         """
         assert type(value) is IonizationModeType
-        self._get_wrapped_object_().IonizationMode = value.value
+        self._get_wrapped_object_().IonizationMode = value
 
     @property
     def corona(self) -> TriState:
@@ -838,7 +838,7 @@ class ScanFilter(NetWrapperBase):
         Gets or sets the corona scan filtering rule.
         """
         assert type(value) is TriState
-        self._get_wrapped_object_().Corona = value.value
+        self._get_wrapped_object_().Corona = value
 
     @property
     def ms_order(self) -> MsOrderType:
@@ -861,7 +861,7 @@ class ScanFilter(NetWrapperBase):
         See ThermoFisher.CommonCore.Data.FilterEnums.MSOrderType for possible values
         """
         assert type(value) is MsOrderType
-        self._get_wrapped_object_().MSOrder = value.value
+        self._get_wrapped_object_().MSOrder = value
 
     def compensation_voltage_value(self, index: int) -> float:
         """

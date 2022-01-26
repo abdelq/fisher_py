@@ -113,7 +113,7 @@ class LabelPeak(NetWrapperBase):
         Gets or sets Peak Options Flag.
         """
         assert type(value) is PeakOptions
-        self._get_wrapped_object_().Flag = value.value
+        self._get_wrapped_object_().Flag = value
 
     @property
     def signal_to_noise(self) -> float:

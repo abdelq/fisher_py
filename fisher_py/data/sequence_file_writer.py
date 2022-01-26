@@ -86,7 +86,7 @@ class SequenceFileWriter(NetWrapperBase):
         use the same calibration curve.
         """
         assert type(value) is BracketType
-        self._get_wrapped_object_().Bracket = value.value
+        self._get_wrapped_object_().Bracket = value
 
     @property
     def tray_configuration(self) -> str:

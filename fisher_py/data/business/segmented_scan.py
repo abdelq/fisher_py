@@ -30,8 +30,8 @@ class SegmentedScan(NetWrapperBase):
         Gets or sets flags, such as "saturated" for each peak.
         """
         assert type(value) is list
-        value = to_net_list(value, int)
-        self._get_wrapped_object_().Flags = [v.value for v in value]
+        value = to_net_list(value, PeakOptions)
+        self._get_wrapped_object_().Flags = value
 
     @property
     def intensities(self) -> List[float]:

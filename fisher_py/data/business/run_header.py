@@ -180,4 +180,4 @@ class RunHeader(NetWrapperBase):
         Gets or sets the tolerance unit.
         """
         assert type(value) is ToleranceUnits
-        self._get_wrapped_object_().ToleranceUnit = value.value
+        self._get_wrapped_object_().ToleranceUnit = value

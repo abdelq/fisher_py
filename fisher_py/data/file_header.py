@@ -92,7 +92,7 @@ class FileHeader(NetWrapperBase):
         the FileType will be set to "Not Supported"
         """
         assert type(value) is FileType
-        self._get_wrapped_object_().FileType = value.value
+        self._get_wrapped_object_().FileType = value
 
     @property
     def revision(self) -> int:

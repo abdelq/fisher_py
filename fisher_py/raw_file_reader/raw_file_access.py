@@ -370,7 +370,7 @@ class RawFileAccess(NetWrapperBase):
         The number of devices of this type
         """
         assert type(type_) is Device
-        return self._get_wrapped_object_().GetInstrumentCountOfType(type_.value)
+        return self._get_wrapped_object_().GetInstrumentCountOfType(type_)
 
     def get_instrument_data(self) -> InstrumentData:
         """
@@ -808,7 +808,7 @@ class RawFileAccess(NetWrapperBase):
         """
         assert type(instrument_type) is Device
         assert type(instrument_index) is int
-        self._get_wrapped_object_().SelectInstrument(instrument_type.value, instrument_index)
+        self._get_wrapped_object_().SelectInstrument(instrument_type, instrument_index)
 
     def default_mass_options(self) -> MassOptions:
         """

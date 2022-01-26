@@ -116,7 +116,7 @@ class InstrumentData(NetWrapperBase):
         Gets or sets the units of the Signal, for UV or analog
         """
         assert type(value) is DataUnits
-        self._get_wrapped_object_().Units = value.value
+        self._get_wrapped_object_().Units = value
 
     @property
     def flags(self) -> str:

@@ -93,7 +93,7 @@ class CentroidStream(NetWrapperBase):
         Gets or sets the flags for the peaks (such as reference)
         """
         assert type(value) is list
-        value = to_net_list([v.value for v in value], int)
+        value = to_net_list(value, PeakOptions)
         self._get_wrapped_object_().Flags = value
 
     @property

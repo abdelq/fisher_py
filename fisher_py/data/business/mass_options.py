@@ -28,13 +28,13 @@ class MassOptions(NetWrapperBase):
             tolerance, tolerance_units = args
             assert is_number(tolerance)
             assert type(tolerance_units) is ToleranceUnits
-            self._wrapped_object = self._wrapped_type(float(tolerance), tolerance_units.value)
+            self._wrapped_object = self._wrapped_type(float(tolerance), tolerance_units)
         elif len(args) == 3:
             tolerance, tolerance_units, precision = args
             assert is_number(tolerance)
             assert type(tolerance_units) is ToleranceUnits
             assert type(precision) is int
-            self._wrapped_object = self._wrapped_type(float(tolerance), tolerance_units.value, precision)
+            self._wrapped_object = self._wrapped_type(float(tolerance), tolerance_units, precision)
         else:
             raise ValueError('Unable to create mass options.')
 
@@ -87,7 +87,7 @@ class MassOptions(NetWrapperBase):
         Gets or sets the tolerance units.
         """
         assert type(value) is ToleranceUnits
-        self._get_wrapped_object_().ToleranceUnits = value.value
+        self._get_wrapped_object_().ToleranceUnits = value
 
     @property
     def tolerance_string(self) -> str:
@@ -107,7 +107,7 @@ class MassOptions(NetWrapperBase):
         Returns:
         The tolerance units as a string.
         """
-        return MassOptions._wrapped_type.GetToleranceString(tolerance_units.value)
+        return MassOptions._wrapped_type.GetToleranceString(tolerance_units)
 
     def clone(self) -> MassOptions:
         """
