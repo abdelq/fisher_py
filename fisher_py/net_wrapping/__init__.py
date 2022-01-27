@@ -20,7 +20,7 @@ clr.AddReference(os.path.join(dll_path, 'OpenMcdf.dll'))
 
 # import .net standard libaries
 import ThermoFisher.CommonCore.Data as thermo_fisher_data
-from ThermoFisher.CommonCore.Data import Extensions
+from ThermoFisher.CommonCore.Data import Extensions, PeakOptions, ToleranceUnits
 import ThermoFisher.CommonCore.Data.Business as thermo_fisher_data_business
 import ThermoFisher.CommonCore.Data.FilterEnums as thermo_fisher_data_filter_enums
 import ThermoFisher.CommonCore.Data.Interfaces as thermo_fisher_data_interfaces
@@ -36,6 +36,9 @@ class _Data:
     Interfaces = thermo_fisher_data_interfaces
     Extensions = Extensions
 
+    # Enums
+    PeakOptions = PeakOptions
+    ToleranceUnits = ToleranceUnits
 
 class ThermoFisher:
 
