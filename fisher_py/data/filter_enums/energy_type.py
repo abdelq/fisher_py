@@ -1,9 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class EnergyType(enum.Enum):
-    """
-    Specifies precursor(collision) energy validation type.
-    """
-    Valid = 0
-    Any = 1
+EnergyType = ThermoFisher.CommonCore.Data.FilterEnums.EnergyType

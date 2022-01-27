@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class SectorScanType(enum.Enum):
-    """
-    Specifies type of sector scan.
-    """
-    SectorBScan = 0
-    SectorEScan = 1
-    Any = 2
+SectorScanType = ThermoFisher.CommonCore.Data.FilterEnums.SectorScanType

@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class EventAccurateMass(enum.Enum):
-    """
-    Determines how accurate mass calibration was done.
-    """
-    Internal = 0
-    External = 1
-    Off = 2
+EventAccurateMass = ThermoFisher.CommonCore.Data.FilterEnums.EventAccurateMass

@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher	
 
-
-class PolarityType(enum.Enum):
-    """
-    Specifies polarity of scan.
-    """
-    Negative = 0
-    Positive = 1
-    Any = 2
+PolarityType = ThermoFisher.CommonCore.Data.FilterEnums.PolarityType

@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class FieldFreeRegionType(enum.Enum):
-    """
-    Specifies type of field free region in scans.
-    """
-    FieldFreeRegion1 = 0
-    FieldFreeRegion2 = 1
-    Any = 2
+FieldFreeRegionType = ThermoFisher.CommonCore.Data.FilterEnums.FieldFreeRegionType

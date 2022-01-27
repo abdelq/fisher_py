@@ -1,12 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class CompensationVoltageType(enum.Enum):
-    """
-    Specifies compensation voltage type.
-    """
-    NoValue = 0
-    SingleValue = 1
-    Ramp = 2
-    SIM = 3
-    Any = 4
+CompensationVoltageType = ThermoFisher.CommonCore.Data.FilterEnums.CompensationVoltageType

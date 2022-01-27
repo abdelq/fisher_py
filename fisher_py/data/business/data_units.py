@@ -1,14 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class DataUnits(enum.Enum):
-    """
-    Units of data from a UV or analog devices (if known).
-    """
-    none = 0
-    AbsorbanceUnits = 1
-    MilliAbsorbanceUnits = 2
-    MicroAbsorbanceUnits = 3
-    Volts = 4
-    MilliVolts = 5
-    MicroVolts = 6
+DataUnits = ThermoFisher.CommonCore.Data.Business.DataUnits

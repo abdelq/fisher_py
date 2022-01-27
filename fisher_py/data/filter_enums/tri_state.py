@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class TriState(enum.Enum):
-    """
-    The feature state. By default: On. This tri-state enum is designed for filtering
-    """
-    On = 0
-    Off = 1
-    Any = 2
+TriState = ThermoFisher.CommonCore.Data.FilterEnums.TriState

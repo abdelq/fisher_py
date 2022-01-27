@@ -1,15 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class ScanModeType(enum.Enum):
-    """
-    Specifies scan mode in scans.
-    """
-    Full = 0
-    Zoom = 1
-    Sim = 2
-    Srm = 3
-    Crm = 4
-    Any = 5
-    Q1Ms = 6
-    Q3Ms = 7
+ScanModeType = ThermoFisher.CommonCore.Data.FilterEnums.ScanModeType

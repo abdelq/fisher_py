@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class RawFileClassification(enum.Enum):
-    """
-    RawFile Classification
-    """
-    Indeterminate = 0
-    StandardRaw = 1
-    MasterScanNumberRaw = 2
+RawFileClassification = ThermoFisher.CommonCore.Data.Interfaces.RawFileClassification

@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class ScanDataType(enum.Enum):
-    """
-    Specifies data type of scan.
-    """
-    Centroid = 0
-    Profile = 1
-    Any = 2
+ScanDataType = ThermoFisher.CommonCore.Data.FilterEnums.ScanDataType

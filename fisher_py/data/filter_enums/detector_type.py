@@ -1,10 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class DetectorType(enum.Enum):
-    """
-    Specifies inclusion or exclusion of the detector value.
-    """
-    Valid = 0
-    Any = 1
-    NotValid = 2
+DetectorType = ThermoFisher.CommonCore.Data.FilterEnums.DetectorType

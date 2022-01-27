@@ -1,9 +1,3 @@
-import enum
+from fisher_py.net_wrapping import ThermoFisher
 
-
-class SourceFragmentationInfoValidType(enum.Enum):
-    """
-    Specified whether the source fragmentation info is valid.
-    """
-    Energy = 0
-    Any = 1
+SourceFragmentationInfoValidType = ThermoFisher.CommonCore.Data.Interfaces.SourceFragmentationInfoValidType
