@@ -39,7 +39,7 @@ class SampleInformation(CommonCoreDataObject):
         """
         Gets or sets the type of the sample.
         """
-        return SampleType(self._get_wrapped_object_().SampleType)
+        return self._get_wrapped_object_().SampleType
 
     @sample_type.setter
     def sample_type(self, value: SampleType):

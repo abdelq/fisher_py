@@ -108,7 +108,7 @@ class InstrumentData(NetWrapperBase):
         """
         Gets or sets the units of the Signal, for UV or analog
         """
-        return DataUnits(self._get_wrapped_object_().Units)
+        return self._get_wrapped_object_().Units
 
     @units.setter
     def units(self, value: DataUnits):
